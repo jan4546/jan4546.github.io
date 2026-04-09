@@ -1,0 +1,113 @@
+/* ===== GENERAL ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.85);
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar li {
+    margin-left: 20px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    color: #00d9ff;
+}
+
+/* ===== INICIO ===== */
+#inicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+}
+
+#inicio h1 {
+    font-size: 3rem;
+}
+
+#inicio p {
+    font-size: 1.5rem;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+    padding: 80px 20px;
+}
+
+/* ===== PROYECTOS ===== */
+.grid-proyectos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* ===== PERFIL ===== */
+#perfil {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* ===== CONTACTO ===== */
+#contacto {
+    text-align: center;
+}
+
+.contacto-links a {
+    margin: 10px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}

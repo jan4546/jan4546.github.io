@@ -1,46 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Portafolio</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Jany Hernandez a Future Developer!</h1>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <div class="contenido">
+            <h1>¡Hola, soy Jan, un Futuro Desarrollador!</h1>
+            <p>Bienvenido a mi portafolio</p>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+
+        <div class="grid-proyectos">
+
+            <div class="card">
+                <h3>Proyecto 1</h3>
+                <p>Descripción de tu proyecto aquí.</p>
+                <a href="https://github.com/" target="_blank">Ver</a>
+            </div>
+
+            <div class="card">
+                <h3>Proyecto 2</h3>
+                <p>Otro proyecto interesante.</p>
+                <a href="https://github.com/" target="_blank">Ver</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PERFIL -->
+    <section id="perfil">
+        <h2>Perfil</h2>
+        <p>
+            Soy un desarrollador en formación apasionado por crear páginas web,
+            aprender nuevas tecnologías y mejorar mis habilidades cada día.
+        </p>
+
+        <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript básico</li>
+            <li>GitHub</li>
+        </ul>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+
+        <div class="contacto-links">
+            <a href="https://github.com/" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+        </div>
+    </section>
+
 </body>
 </html>
-<nav id="navbar">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
-#navbar {
-    position: fixed;   /* Se queda fijo al hacer scroll */
-    top: 0;            /* Parte superior de la pantalla */
-    width: 100%;       /* Ocupa todo el ancho */
-    background-color: #333; /* Color de fondo */
-    color: white;      /* Color de texto */
-    padding: 10px 20px;
-    z-index: 1000;     /* Para que esté sobre otros elementos */
-}
-#navbar ul {
-    list-style: none;      /* Quita los puntos de la lista */
-    margin: 0;
-    padding: 0;
-    display: flex;         /* Hace los elementos en línea */
-    justify-content: flex-end; /* Alinea los enlaces a la derecha */
-}
-#navbar li {
-    margin-left: 20px;     /* Separación entre enlaces */
-}
-#navbar a {
-    color: white;           /* Color del enlace */
-    text-decoration: none;  /* Quita el subrayado */
-    font-weight: bold;
-}
-#navbar a:hover {
-    color: #ffcc00;        /* Color al pasar el mouse */
-}
