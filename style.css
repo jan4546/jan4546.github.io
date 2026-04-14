@@ -95,17 +95,17 @@ section {
 }
 
 /*  PROFILE  */
-#profile {
+#Profile {
     background-color: #282766;
     text-align: center;
 }
 
-/*  CONTACTO  */
-#contacto {
+/*  Contact  */
+#contact {
     text-align: center;
 }
 
-.contacto-links a {
+.contact-links a {
     margin: 10px;
     text-decoration: none;
     color: #3498db;
