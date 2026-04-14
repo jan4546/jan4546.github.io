@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 #navbar li {
@@ -41,7 +41,7 @@ body {
     color: #00d9ff;
 }
 
-/* ===== INICIO ===== */
+/*  INICIO  */
 #inicio {
     height: 100vh;
     display: flex;
@@ -60,12 +60,12 @@ body {
     font-size: 1.5rem;
 }
 
-/* ===== SECCIONES GENERALES ===== */
+/*  SECCIONES GENERALES  */
 section {
     padding: 80px 20px;
 }
 
-/* ===== PROYECTOS ===== */
+/*  PROYECTOS  */
 .grid-proyectos {
     display: flex;
     gap: 20px;
@@ -94,13 +94,13 @@ section {
     text-decoration: none;
 }
 
-/* ===== PERFIL ===== */
+/*  PERFIL  */
 #perfil {
-    background-color: #f4f4f4;
+    background-color: #282766;
     text-align: center;
 }
 
-/* ===== CONTACTO ===== */
+/*  CONTACTO  */
 #contacto {
     text-align: center;
 }
