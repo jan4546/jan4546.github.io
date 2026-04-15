@@ -106,10 +106,33 @@ section {
 }
 
 /*  Contact  */
-#contact {
-    
-    text-align: center;
+#contact .grid-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     color: #f5f3ff
+}
+
+#contact .card {
+    background: #6e61cf;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
 }
 
 .contact-links a {
