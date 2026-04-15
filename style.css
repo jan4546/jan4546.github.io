@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f3ff;
+    background-color: #e6e2fc;
 }
 
 /* NAVBAR */
@@ -68,7 +68,7 @@ section {
 }
 
 /*  PROYECTOS  */
-.grid-proyectos {
+#projects .grid-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -76,7 +76,7 @@ section {
     color: #f5f3ff
 }
 
-.card {
+#projects .card {
     background: #6e61cf;
     padding: 20px;
     width: 250px;
@@ -100,9 +100,9 @@ section {
 /*  PROFILE  */
 #Profile {
     
-    background-color: #0b0b1f;
+    background-color: #e6e2fc;
     text-align: center;
-    color: #f5f3ff
+    color: #080808
 }
 
 /*  Contact  */
