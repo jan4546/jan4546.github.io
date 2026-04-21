@@ -119,31 +119,31 @@ section {
 }
 
 /*  SOCIAL  */
-#social {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.social-title {
-    font-size: 48px;
-    font-weight: 800;
-    color: #1e293b;
-}
-
-.big-l {
-    font-size: 80px;
-    color: #4fd1c5;
-}
-
-.social-links {
-    margin-top: 20px;
+#social .grid-container{
     display: flex;
-    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #191724
 }
 
-.social-links a {
+#social .Social-links {
+    background: #90d2f5;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+#social .Social-links:hover {
+    transform: translateY(-5px);
+}
+
+#social .Social-links a {
+    margin: 10px;
     text-decoration: none;
-    color: #38bdf8;
-    font-weight: bold;
+    color: #95d6ff;
+    font-weight: none;
 }
