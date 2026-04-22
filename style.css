@@ -57,7 +57,7 @@ h3 {
 }
 
 /*  INICIO  */
-#inicio {
+#home {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -67,17 +67,34 @@ h3 {
     color: #f5f3ff;
 }
 
-#inicio h1 {
+#home h1 {
     font-size: 3rem;
 }
 
-#inicio p {
+#home p {
     font-size: 1.5rem;
 }
 
 /*  SECCIONES GENERALES  */
 section {
-    padding: 80px 20px;
+    padding: 100px 20px;
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5rem; 
+        font-weight: 700; 
+        letter-spacing: 1px;
+    }
+
+    h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #112950;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
 }
 
 /*  PROYECTOS  */
@@ -112,12 +129,62 @@ section {
 }
 
 /*  PROFILE  */
-#Profile {
+#profile {
     
-    background-color: #e6e2fc;
-    text-align: center;
+    background-color: #f2f5f7;
+    text-align: left;
     color: #080808
 }
+
+/*  SKILLS  */
+#skills {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background: #f3f6ff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 900px;
+    transition: 0.3s;
+    cursor: pointer;
+    height: 300px;
+}
+
+/* IMAGEN */
+.skill-card img {
+    width: 100px;
+    transition: 0.8s;
+}
+
+/* TEXTO */
+.skill-card p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* 🔥 HOVER EFECTO */
+.skill-card:hover {
+    transform: scale(1.1); /* se agranda */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: #90d2f5;
+    color: #080808;
+    box-shadow: 0 0 20px rgba(79, 172, 209, 0.5);
+}
+
+/* IMAGEN CRECE TAMBIÉN */
+.skill-card:hover img {
+    transform: scale(1.2);
+
+}
+
 
 /*  SOCIAL  */
 #social .grid-container{
