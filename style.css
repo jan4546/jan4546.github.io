@@ -31,7 +31,7 @@ h2 {
 h3 {
     font-weight: 900;
     line-height: 1.2;
-    margin: 0%;
+    
 }
 
 /* NAVBAR */
@@ -85,7 +85,8 @@ h3 {
 
 /*  INICIO  */
 #home {
-    height: 100vh;
+    height: 50vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,10 +97,16 @@ h3 {
 
 #home h1 {
     font-size: 5rem;
+    margin-right: 50px;
 }
 
 #home p {
     font-size: 1.5rem;
+    margin-right: 50px;
+}
+
+#home .home-image {
+    margin-left: 50px;
 }
 
 /*  SECCIONES GENERALES  */
@@ -137,12 +144,12 @@ section h2::after {
     width: 120%;
     height: auto;
     border-radius: 12px;
-    transition: transform 0.3s, ease;
+    transition: transform 1.1s cubic-bezier(0.25, 0.1, 0.25, 1);
     cursor: pointer;
 }
 
 #creative-work .art-gallery img:hover {
-    transform: scale(1.25);
+    transform: scale(1.25) translateY(-4px) rotate(1deg);
 }
 
 #creative-work .art-gallery .card {
@@ -172,7 +179,7 @@ section h2::after {
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(144,110,73,0.1);
     text-align: center;
-    transition: 0.3s;
+    transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .card:hover {
@@ -227,7 +234,7 @@ section h2::after {
 /* IMAGEN */
 #skills .skill-card img {
     width: 100px;
-    transition: 0.8s;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* TEXTO */
@@ -238,7 +245,7 @@ section h2::after {
 
 /* HOVER EFECTO */
 #skills .skill-card:hover {
-    transform: scale(1.1); /* se agranda */
+    transform: scale(1.1);
     box-shadow: 0 10px 25px rgba(117, 88, 57, 0.25);
     background: #d4bdb0;
     color: #080808;
@@ -255,9 +262,11 @@ section h2::after {
 #social .grid-container{
     display: flex;
     gap: 30px;
+    margin-top: 50px;
     flex-wrap: wrap;
     justify-content: center;
     color: #E9D7CD
+    
 }
 
 #social .Social-links {
@@ -267,7 +276,8 @@ section h2::after {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(144,110,73,0.1);
     text-align: center;
-    transition: 0.3s;
+    transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    height: 100px;
 }
 
 #social .Social-links:hover {
