@@ -111,6 +111,7 @@ h3 {
     margin-left: 50px;
     position: relative;
     z-index: 1;
+    transform: scale(1.70) rotate(4deg) translateX(10px); 
 }
 
 #home .home-background {
