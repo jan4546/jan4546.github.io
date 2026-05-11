@@ -11,6 +11,25 @@ body{
   margin: 0%;
   line-height: 1.6;
   background-color: #ead9cf;
+  position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: url("Img/estreas debajo de home.png") repeat;
+    background-size: 200px;
+
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -304,35 +323,9 @@ section h2::after {
     font-weight: 700;
     margin-bottom: 25px;
     letter-spacing: 1px;
-}
-#profile .profile-background {
-    position: absolute;
-    inset: 0;
 
-    z-index: 0;
 
-    opacity: 0.50;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#profile .profile-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: floatStars 25s linear infinite;
-}
-
-@keyframes floatStars {
-    from { transform: translateY(0); }
-    to { transform: translateY(-20px); }
-}
-
-#profile .contenido {
-    position: relative;
-    z-index: 1;
-
+    
 }
 
 
