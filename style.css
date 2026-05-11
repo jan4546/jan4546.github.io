@@ -19,10 +19,10 @@ body::before {
     position: fixed;
     inset: 0;
 
-    background: url("Img/estreas debajo de home.png") repeat;
+    background: url("Img/estrellasDebajoDeHome.png") repeat;
     background-size: 200px;
 
-    opacity: 0.04;
+    opacity: 0.4;
     pointer-events: none;
     z-index: 0;
 }
