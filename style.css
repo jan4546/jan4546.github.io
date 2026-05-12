@@ -19,10 +19,10 @@ body::before {
     position: fixed;
     inset: 0;
 
-    background: url("Img/estrellasDebajoDeHome.png") repeat;
+    background: url("Img/particulasFondo.png") repeat;
     background-size: 200px;
 
-    opacity: 0.4;
+    opacity: 0.5;
     pointer-events: none;
     z-index: 0;
 }
@@ -335,7 +335,33 @@ section h2::after {
     text-align: left;
     color: #080808
 }
+#about-me p {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.8s ease forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+#about-me .highlight {
+    color: #CA9F86;
+    font-weight: 600;
+}
+
+#about-me .tag {
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    color: #906e49;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
 /*  SKILLS  */
 #skills {
@@ -343,46 +369,72 @@ section h2::after {
     padding: 100px 20px;
 }
 
-#skills .skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.skills-subtitle {
+    opacity: 0.6;
+    margin-bottom: 30px;
 }
 
-#skills .skill-card {
+/* CONTAINER */
+.skills-container {
+    display: flex;
+    justify-content: center;
+}
 
-    padding: 20px;
-    border-radius: 15px;
-    width: 300px;
+/* CARD */
+.skill-card {
+    width: 260px;
+    padding: 25px;
+    border-radius: 16px;
+
+    background: #d4bdb0;
+    box-shadow: 0 10px 25px rgba(117, 88, 57, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
     transition: 0.3s;
-    cursor: pointer;
-    height: 150px;
+}
+
+/* BADGE (contexto visual) */
+.badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+
+    background: #906e49;
+    color: white;
 }
 
 /* IMAGEN */
-#skills .skill-card img {
-    width: 100px;
+#skills .skill-card img { 
+    width: 100px; 
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* TEXTO */
-#skills .skill-card p {
-    margin-top: 30px;
-    font-weight: 600;
+.skill-card h3 {
+    margin: 0;
 }
 
-/* HOVER EFECTO */
-#skills .skill-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(117, 88, 57, 0.25);
-    background: #d4bdb0;
-    color: #080808;
+.description {
+    font-size: 0.85rem;
+    opacity: 0.7;
 }
 
-/* IMAGEN CRECE TAMBIÉN */
-#skills .skill-card:hover img {
-    transform: scale(1.2);
+/* HOVER */
+.skill-card:hover {
+    transform: translateY(-10px);
+}
 
+.skill-card:hover img {
+    transform: scale(1.15);
+}
+
+#skills .skill-card a {
+    text-decoration: none;
+    color: inherit;
 }
 
 
