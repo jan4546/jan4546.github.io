@@ -2,6 +2,9 @@
 html {
     scroll-behavior: smooth;
 }
+* {
+    box-sizing: border-box;
+}
 
 body{
   font-family: "Domine", serif;
@@ -12,6 +15,7 @@ body{
   line-height: 1.6;
   background-color: #ead9cf;
   position: relative;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -51,6 +55,10 @@ h3 {
     font-weight: 900;
     line-height: 1.2;
     
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -104,21 +112,24 @@ h3 {
 
 /*  INICIO  */
 #home {
+    min-height: 100vh;
     height: 50vh;
     width: 100%;
     display: flex;
+    flex: row;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: linear-gradient(135deg, #A36947, #7F5237);
     color: #f5f3ff;
-    position: relative;
     overflow: hidden;
+    gap: 50px;
+    padding: 0 80px;
 }
 
 #home h1 {
     font-size: 5rem;
-    margin-right: 50px;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -126,20 +137,25 @@ h3 {
 
 #home p {
     font-size: 1.5rem;
-    margin-right: 50px;
+
 }
 
 #home .home-image {
-    margin-left: 50px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    transform: scale(0.75) rotate(4deg);
     position: relative;
-    z-index: 1;
-    transform: scale(1.70) rotate(4deg) translateX(10px); 
+    z-index: 3;
+    margin-right: 100px;
+
 }
+
 
 #home .home-background {
     position: absolute;
     inset: 0;
-
+    width: 100%;
     z-index: 0;
 
     opacity: 0.50;
@@ -147,6 +163,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
 }
 #home .home-background img {
     width: 100%;
@@ -180,7 +197,8 @@ section h2 {
 section h2::after {
     content: "";
     display: block;
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     height: 4px;
     background: #112950;
     margin: 10px auto 0;
@@ -202,6 +220,8 @@ section h2::after {
     border-radius: 12px;
     transition: transform 1.1s cubic-bezier(0.25, 0.1, 0.25, 1);
     cursor: pointer;
+    max-width: 300px;
+    height: 400px;
 }
 
 #creative-work .art-gallery img:hover {
@@ -270,7 +290,8 @@ section h2::after {
 }
 
 .card-icon {
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
     height: 120px;
     filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
 
@@ -289,7 +310,10 @@ section h2::after {
     grid-template-columns: 0.5fr 1fr 1fr;
     gap: 40px;
     align-items: center;
+    width: 100%;
+    max-width: 900px;
     text-align: left;
+    margin: 0 auto;
     position: relative;
     color: #080808
 }
@@ -349,6 +373,7 @@ section h2::after {
     color: #080808
 }
 #about-me p {
+    width: 100%;
     max-width: 700px;
     margin: 0 auto 20px auto;
     line-height: 1.8;
@@ -392,12 +417,14 @@ section h2::after {
 
 /* cada bloque */
 .skills-box {
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 300px;
 }
 
 .skills-boxD {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     height: 300px;
     margin-left: 100px;
 }
@@ -428,7 +455,8 @@ section h2::after {
 }
 
 .platform-card img {
-    width: 80px;
+    max-width: 80px;
+    width: 100%;
 }
 
 .platform-card:hover {
@@ -474,4 +502,108 @@ section h2::after {
 .social-links a:hover {
     color: #906e49;
     transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 20px 40px;
+        overflow: visible;
+    }
+    #home .home-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.5;
+        background-size: cover;
+        padding-bottom: 1px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+    }
+
+    #home p {
+        font-size: 1rem;
+        margin-right: 0;
+        
+    }
+
+    #home .home-image {
+        margin-left: 0;
+        margin-right: 100px;
+        margin-bottom: 70px;
+        transform: scale(0.4) rotate(2deg) translateX(0); 
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .skills-boxD {
+        margin-left: 0;
+        width: 100%;
+        max-width: 320px;
+    }
+    #creative-work .art-gallery {
+        width: 100%;
+    }
+    #profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        width: 100%;
+        max-width: 900px;
+        text-align: left;
+        margin: 0 auto;
+        position: relative;
+        color: #080808
+    }
+    #profile .skills-container {
+        margin: 0;
+    }
+    #projects .grid-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    #projects .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    #navbar ul {
+        align-items: center;
+    }
+    section {
+        padding: 70px 20px;
+    }
+    #navbar {
+        padding: 10px 15px;
+        position: sticky;
+        top: 0;
+    }
+    #navbar ul{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    #social {
+        padding: 40px;
+    }
+
 }
