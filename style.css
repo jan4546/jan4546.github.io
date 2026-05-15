@@ -184,7 +184,7 @@ html, body {
 
 /*  SECCIONES GENERALES  */
 section {
-    padding: 100px 20px;
+    padding: 70px 0;
 }
 section h2 {
         text-align: center;
@@ -210,7 +210,7 @@ section h2::after {
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    padding: 20px;
+    padding: 20px 20px;
 
 }
 
@@ -240,6 +240,34 @@ section h2::after {
 
 /*  PROYECTOS  */
 
+#projects{
+    position: relative;
+}
+
+.projects-decor{
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* imagen izquierda */
+.projects-decor .decor-left {
+    position: absolute;
+    left: 0;
+    width: 600px;   /* ajusta tamaño */
+    height: auto;
+}
+
+/* imagen derecha */
+.projects-decor .decor-right {
+    position: absolute;
+    right: 0;
+    width: 600px;   /* ajusta tamaño */
+    height: auto;
+}
+
 #projects .grid-container {
     display: flex;
     gap: 30px;
@@ -247,6 +275,7 @@ section h2::after {
     justify-content: center;
     color: #260C0C;
     font-style: bold;
+    padding: 20px 20px;
     
 }
 
@@ -308,14 +337,19 @@ section h2::after {
 #profile {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr;
-    gap: 40px;
+
+    gap: 60px;
+
     align-items: center;
+
     width: 100%;
-    max-width: 900px;
-    text-align: left;
+    max-width: 1300px;
+
     margin: 0 auto;
-    position: relative;
-    color: #080808
+
+    padding: 20 20px;
+
+    color: #080808;
 }
 #profile .profile-image {
     width: 100%;
@@ -340,6 +374,7 @@ section h2::after {
     transition: 0.3s ease;
 }
 
+
 #profile .skills-list li:hover {
     transform: translateY(-4px);
     background: #CA9F86;
@@ -351,9 +386,9 @@ section h2::after {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-left: 25px;
     align-items: center;
     margin-bottom: 50px;
+    margin-left: 0;
 }
 #profile .skills-title {
     font-size: 2.5rem;
@@ -367,20 +402,53 @@ section h2::after {
 
 
 /*  ABOUT ME  */
-#about-me {
+/* ABOUT ME */
 
-    text-align: left;
-    color: #080808
-}
-#about-me p {
+#about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
     width: 100%;
-    max-width: 700px;
-    margin: 0 auto 20px auto;
+    max-width: 100%;
+    margin: 0;
+
+    margin: 0 auto;
+    padding: 5px 20px;
+
+    color: #080808;
+}
+.about-content {
+    max-width: 800px;
+    max-width: 1.4;
+    flex: 1.5;
+}
+
+#about-me h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+#about-me .tag {
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    color: #906e49;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#about-me p {
     line-height: 1.8;
+    margin-bottom: 18px;
+
     opacity: 0;
     transform: translateY(10px);
     animation: fadeIn 0.8s ease forwards;
 }
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -392,17 +460,44 @@ section h2::after {
     color: #CA9F86;
     font-weight: 600;
 }
-#about-me .about-image{
-    
+
+.about-image img {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    position: relative;
+    z-index: 3;
 }
 
-#about-me .tag {
-    letter-spacing: 3px;
-    font-size: 1.2rem;
-    color: #906e49;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    #about-me {
+        flex-direction: column;
+        text-align: center;
+
+        gap: 30px;
+        padding: 70px 20px;
+    }
+
+    .about-image img {
+        width: 180px;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    #about-me h2 {
+        font-size: 2rem;
+    }
 }
+
 
 /*  SKILLS  */
 #skills {
@@ -507,106 +602,202 @@ section h2::after {
     transform: translateY(-3px);
 }
 
+#social p{
+    margin: 0;
+    display: inline-block;
+}
 
-@media (max-width: 768px) {
+
+
+/* ============================= */
+/*        RESPONSIVE ONLY        */
+/*   (NO MODIFICA DESKTOP)       */
+/* ============================= */
+
+
+/* ================= TABLETS ================= */
+@media (max-width: 1024px) {
+
+    /* HOME */
     #home {
         flex-direction: column;
-        min-height: 100vh;
-        padding: 40px 20px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 20px 40px;
-        overflow: visible;
-    }
-    #home .home-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        opacity: 0.5;
-        background-size: cover;
-        padding-bottom: 1px;
-    }
-
-    #home h1 {
-        font-size: 2rem;
-        margin: 0 0 10px 0;
-    }
-
-    #home p {
-        font-size: 1rem;
-        margin-right: 0;
-        
+        height: auto;
+        padding: 120px 20px 60px;
+        gap: 30px;
     }
 
     #home .home-image {
-        margin-left: 0;
-        margin-right: 100px;
-        margin-bottom: 70px;
-        transform: scale(0.4) rotate(2deg) translateX(0); 
+        margin: 0;
+        transform: scale(0.6) rotate(3deg);
     }
 
+    #home h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #home p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    /* PROFILE */
+    #profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    #profile .skills-container {
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    /* ABOUT ME */
+    #about-me {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .about-image img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* PROJECTS */
+    #projects .grid-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #projects .card {
+        width: 90%;
+    }
+
+    /* PROJECTS DECOR */
+    .projects-decor .decor-left,
+    .projects-decor .decor-right {
+        width: 300px;
+    
+    }
+
+    /* SKILLS */
     .skills-container {
         flex-direction: column;
         align-items: center;
-        gap: 5px;
+        gap: 30px;
     }
 
     .skills-boxD {
         margin-left: 0;
+    }
+
+    /* SOCIAL */
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .social-phone {
+    margin-top: 25px;
+    text-align: center;
+    opacity: 0.8;
+}
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+    /* GLOBAL TEXT */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    /* NAVBAR */
+    #navbar {
+        padding: 10px;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #navbar li {
+        margin-left: 10px;
+    }
+
+    /* HOME */
+    #home {
+        padding: 120px 15px 60px;
+        gap: 20px;
+    }
+
+    #home .home-image {
+        transform: scale(0.45) rotate(2deg);
+        margin: 0;
+        margin-right: 150px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    /* PROFILE */
+    #profile {
+        padding: 40px 15px;
+    }
+
+    /* ABOUT ME */
+    #about-me {
+        padding: 40px 15px;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* PROJECTS */
+    #projects .card {
+        width: 100%;
+    }
+
+    /* OCULTAR DECORACIONES (evita ruido visual) */
+    .projects-decor {
+        display: none;
+    }
+
+    /* SKILLS */
+    .skills-box,
+    .skills-boxD {
         width: 100%;
         max-width: 320px;
     }
-    #creative-work .art-gallery {
-        width: 100%;
-    }
-    #profile {
-        grid-template-columns: 1fr;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        width: 100%;
-        max-width: 900px;
-        text-align: left;
-        margin: 0 auto;
-        position: relative;
-        color: #080808
-    }
-    #profile .skills-container {
-        margin: 0;
-    }
-    #projects .grid-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-    #projects .card {
-        width: 100%;
-        max-width: 350px;
-    }
-    #navbar ul {
-        align-items: center;
-    }
-    section {
-        padding: 70px 20px;
-    }
-    #navbar {
-        padding: 10px 15px;
-        position: sticky;
-        top: 0;
-    }
-    #navbar ul{
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+
+    /* SOCIAL */
     #social {
-        padding: 40px;
+        padding: 60px 15px;
     }
 
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
