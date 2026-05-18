@@ -582,6 +582,22 @@ section h2::after {
     margin-bottom: 30px;
 }
 
+.social-decor .decor-right {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 400px;
+    height: auto;
+}
+
+.social-decor .decor-left {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 400px;
+    height: auto;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
